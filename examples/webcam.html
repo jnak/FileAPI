@@ -95,10 +95,12 @@
 						if( cam.isActive() ){
 							var shot = cam.shot();
 
+							console.log('before 1st thumbnail');
 							shot
 								.clone()
 								.preview(100, 100)
 								.get(function (err, img){
+									console.log('this is never called');
 									img.style.marginRight = '5px';
 									shots.insertBefore(img, shots.firstChild);
 								});
